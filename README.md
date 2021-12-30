@@ -9,5 +9,5 @@ Since the attack is completed using file input/output between C and Python, oper
 -----------
 ## Implementation Phase
 #### 0. Preset  
-'S1AS2 attack (Structural Analysis)' folder is set in the environment running Python like ***Jupyter Notebook***, and the rest of the files move the code to ***Visual Studio 2019***.  
+**'S1AS2 attack (Structural Analysis)'** folder is set in the environment running Python like ***Jupyter Notebook***, and the rest of the files move the code to ***Visual Studio 2019***.  
 #### 1. Shi's LW-WBC Code (C language)  
