@@ -1,4 +1,4 @@
-# Structural_Analysis_of_Shi-s_LW_WBC
+# Structural_Analysis_of_Shi's_LW_WBC
 
 This project is a code that conducted sturctural analysis study on the 'Light-weight White-box Cryptographic model' proposed in 2019.  
 The paper was published in IEEE transaction on Computers as "A Light-Weight White-Box Encryption Scheme for Securing Distributed Embedded Devices" by Shi et al. (<u>https://ieeexplore.ieee.org/abstract/document/8675491</u>)  
