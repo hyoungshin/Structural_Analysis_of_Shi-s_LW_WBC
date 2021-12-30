@@ -11,3 +11,9 @@ Since the attack is completed using file input/output between C and Python, oper
 #### 0. Preset  
 **'S1AS2 attack (Structural Analysis)'** folder is set in the environment running Python like ***Jupyter Notebook***, and the rest of the files move the code to ***Visual Studio 2019***.  
 #### 1. Shi's LW-WBC Code (C language)  
+``` C
+//WB_gen_encryption_table(&tab, &enc_data, &dec_data);
+WB_read_enc_ext_encoding(&enc_data, "enc_data.bin");
+//WB_read_dec_ext_encoding(&dec_data, "dec_data.bin");
+```
+The encryption data created with 'WB_gen_encryption_table()' is loaded through 'WB_read_enc_ext_encoding()'
