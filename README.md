@@ -45,4 +45,18 @@ Paste the data outputs above into the corresponding round folder file in **'S1AS
 Complete that task for every round.
 
 #### 2. S1AS2 attack (Python language)  
-Execute the code in an environment that can run Python code. 
+Execute the code in an environment that can run Python code. We ran the attack in ***Jupyter notebook 3.7.3***.  
+
+    [21.12.28] SAS+Shi (1-round).ipynb
+    [21.12.28] SAS+Shi (2-round).ipynb
+    ...
+    
+    
+    1round_inverse.bin
+    2round_inverse.bin
+    ...
+    
+If you run the **.ipynb** file in all folders, *'1round_inverse.bin' et al.* is created in the folder.  
+After that, put the generated file in the **'recovery file'** folder of ***Visual Studio 2019***.
+
+#### 3. Structural analysis of Shi's LW-WBC Code (C language)  
