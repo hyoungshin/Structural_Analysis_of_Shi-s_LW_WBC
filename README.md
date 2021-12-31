@@ -7,7 +7,7 @@ Therefore, we implement the proposed LW-WBC based on the C language and obtain e
 Since the attack is completed using file input/output between C and Python, operating as follows is necessary.  
 
 -----------
-## Implementation Phase
+## Code Working Process
 #### 0. Preset  
 **'S1AS2 attack (Structural Analysis)'** folder is set in the environment running Python like ***Jupyter Notebook***, and the rest of the files move the code to ***Visual Studio 2019***.  
 #### 1. Shi's LW-WBC Code (C language)  
@@ -16,4 +16,22 @@ Since the attack is completed using file input/output between C and Python, oper
 WB_read_enc_ext_encoding(&enc_data, "enc_data.bin");
 //WB_read_dec_ext_encoding(&dec_data, "dec_data.bin");
 ```
-The encryption data created with 'WB_gen_encryption_table()' is loaded through 'WB_read_enc_ext_encoding()'
+The encryption data created with *'WB_gen_encryption_table()'* is loaded through *'WB_read_enc_ext_encoding()'*
+Here, *'WB_gen_encryption_table'* is executed only once, and when the user needs verification, **'dec_data'** data is loaded.
+``` C
+Encryption(&plaintext, &ciphertext, middle_state, &enc_data);
+```
+Next, the encryption algorithm of LW-WBC is operated, and the fixed_value is stored in the **'middle_state'**.  
+**'middle_state'** is a fixed value used for S-box attacks and affine attacks in sturctural analysis. 
+``` C
+//Run the code for each round. That is, since the total round is 16, it is a total of 16 times.
+int round = 0;
+Fullround_attack_get_ciphertext(fp, fp2, fp3, round, &enc_data, middle_state[round], &bit5_temp, &temp_Matrix);
+
+#if 0
+    byte round1_Sbox1_inv[16][12][32] = { 0 };
+    bool round1_affine_inv[16][60][60] = { 0 };
+    byte round1_Sbox2_inv[16][15][16] = { 0 };
+    ....
+```
+'Fullround_attack_get_ciphertext()' stores ciphertext data sets necessary for the round attacl as file input/output. 
