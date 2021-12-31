@@ -45,3 +45,4 @@ Paste the data outputs above into the corresponding round folder file in **'S1AS
 Complete that task for every round.
 
 #### 2. S1AS2 attack (Python language)  
+Execute the code in an environment that can run Python code. 
