@@ -33,5 +33,15 @@ Fullround_attack_get_ciphertext(fp, fp2, fp3, round, &enc_data, middle_state[rou
     bool round1_affine_inv[16][60][60] = { 0 };
     byte round1_Sbox2_inv[16][15][16] = { 0 };
     ....
+#endif
 ```
-'Fullround_attack_get_ciphertext()' stores ciphertext data sets necessary for the round attacl as file input/output. 
+*'Fullround_attack_get_ciphertext()'* stores ciphertext data sets necessary for the round attacl as file input/output. 
+
+    round_ciphertext_sbox.bin
+    round_ciphertext_affine.bin
+    round_ciphertext_firstsbox.bin
+    
+Paste the data outputs above into the corresponding round folder file in **'S1AS2 attack (Structural Analysis).'** 
+Complete that task for every round.
+
+#### 2. S1AS2 attack (Python language)  
