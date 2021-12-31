@@ -1,7 +1,7 @@
 # Structural Analysis of Shi's LW-WBC
 
 This project is a code that conducted sturctural analysis study on the 'Light-weight White-box Cryptographic model' proposed in 2019.  
-The paper was published in IEEE transaction on Computers as "A Light-Weight White-Box Encryption Scheme for Securing Distributed Embedded Devices" by Shi et al. (<u>https://ieeexplore.ieee.org/abstract/document/8675491</u>)  
+The paper was published in IEEE transaction on Computers as "A Light-Weight White-Box Encryption Scheme for Securing Distributed Embedded Devices" by Shi et al. ([Shi's LW-WBC site](https://ieeexplore.ieee.org/abstract/document/8675491))  
 Although LW-WBC(Light-Weight White-Box Cryptography) claims to be safe against various attack methods, we can obtain each component function through a structural analysis attack.  
 Therefore, we implement the proposed LW-WBC based on the C language and obtain each component function through Python language. 
 Since the attack is completed using file input/output between C and Python, operating as follows is necessary.  
@@ -99,5 +99,5 @@ As a result, we can obtain a functionally equivalent decryption oracle with LW-W
 
 -----------
 ## Related research
-+ Hyoungshin Yim, Ju-Sung Kang, and Yongjin Yeom. "An Efficient Structural Analysis of SAS and its Application to White-Box Cryptography." 2021 IEEE Region 10 Symposium (TENSYMP). IEEE, 2021.
++ Hyoungshin Yim, Ju-Sung Kang, and Yongjin Yeom. "An Efficient Structural Analysis of SAS and its Application to White-Box Cryptography." 2021 IEEE Region 10 Symposium (TENSYMP). IEEE, 2021. ([TENSYMP site](https://ieeexplore.ieee.org/abstract/document/9550967))
 + Hyoungshin Yim. "A Study on the Efficient Sturctural Analysis and its Application to White-Box Cryptography." 2021. Kookmin University, MS dissertation. 
