@@ -60,3 +60,39 @@ If you run the **.ipynb** file in all folders, *'1round_inverse.bin' et al.* is 
 After that, put the generated file in the **'recovery file'** folder of ***Visual Studio 2019***.
 
 #### 3. Structural analysis of Shi's LW-WBC Code (C language)  
+Comment out *'Fullround_attack_get_ciphertext(),'* a function that generates ciphertext, and set the if statement to 1.   
+``` C
+//int round = 0;
+//Fullround_attack_get_ciphertext(fp, fp2, fp3, round, &enc_data, middle_state[round], &bit5_temp, &temp_Matrix);
+
+#if 1
+    byte round1_Sbox1_inv[16][12][32] = { 0 };
+    bool round1_affine_inv[16][60][60] = { 0 };
+    byte round1_Sbox2_inv[16][15][16] = { 0 };
+    ....
+#endif
+```
+As a result, the code is activated as follows.  
+``` C
+    //1round_file_read
+    FILE* fp4;
+
+    fopen_s(&fp4, "recovery_file/1round_inverse.bin", "rb");
+    if (fp4 == NULL) {
+        printf("file open fail!\n");
+        return -1;
+    }
+    else {
+        fread(round1_Sbox1_inv[0], sizeof(round1_Sbox1_inv[0]), 1, fp4);
+        fread(round1_affine_inv[0], sizeof(round1_affine_inv[0]), 1, fp4);
+        fread(round1_Sbox2_inv[0], sizeof(round1_Sbox2_inv[0]), 1, fp4);
+    }
+    fclose(fp4);
+    
+    //2round_file_read
+    ...
+    
+    recovery_decryption(&recovery_plaintext, &ciphertext, round1_Sbox1_inv, round1_affine_inv, round1_Sbox2_inv);
+```
+*'recovery_decryption()'* is an algorithm that constructs functions obtained from **Python** as a decryption process.  
+As a result, we can obtain a functionally equivalent decryption oracle with LW-WBC.  
