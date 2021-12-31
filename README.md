@@ -96,3 +96,8 @@ As a result, the code is activated as follows.
 ```
 *'recovery_decryption()'* is an algorithm that constructs functions obtained from **Python** as a decryption process.  
 As a result, we can obtain a functionally equivalent decryption oracle with LW-WBC.  
+
+-----------
+## Related research
++ Hyoungshin Yim, Ju-Sung Kang, and Yongjin Yeom. "An Efficient Structural Analysis of SAS and its Application to White-Box Cryptography." 2021 IEEE Region 10 Symposium (TENSYMP). IEEE, 2021.
++ Hyoungshin Yim. "A Study on the Efficient Sturctural Analysis and its Application to White-Box Cryptography." 2021. Kookmin University, MS dissertation. 
